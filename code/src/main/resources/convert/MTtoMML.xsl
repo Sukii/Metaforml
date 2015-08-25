@@ -9,6 +9,24 @@
   </math>
 </xsl:template>
 
+<xsl:template match="pile">
+  <mtable>
+    <xsl:apply-templates />
+  </mtable>
+</xsl:template>
+
+<xsl:template match="pile/row">
+  <mtr>
+    <xsl:apply-templates />
+  </mtr>
+</xsl:template>
+
+<xsl:template match="pile/row/*">
+  <mtd>
+    <xsl:apply-templates />
+  </mtd>
+</xsl:template>
+
 <xsl:template match="line">
   <mrow>
     <xsl:apply-templates/>
